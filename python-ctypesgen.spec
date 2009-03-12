@@ -38,13 +38,15 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%{py_sitescriptdir}/*.egg-info
-%dir %{py_sitescriptdir}/ctypesgencore
-%{py_sitescriptdir}/ctypesgencore/*.py[co]
-%dir %{py_sitescriptdir}/ctypesgencore/parser
-%{py_sitescriptdir}/ctypesgencore/parser/*.py[co]
-%dir %{py_sitescriptdir}/ctypesgencore/printer
-%{py_sitescriptdir}/ctypesgencore/printer/*.py[co]
-%dir %{py_sitescriptdir}/ctypesgencore/processor
-%{py_sitescriptdir}/ctypesgencore/processor/*.py[co]
 %attr(755,root,root) %{_bindir}/ctypesgen.py
+%{py_sitescriptdir}/*.egg-info
+%{py_sitescriptdir}/ctypesgencore
+
+#%dir %{py_sitescriptdir}/ctypesgencore
+#%{py_sitescriptdir}/ctypesgencore/*.py[co]
+#%dir %{py_sitescriptdir}/ctypesgencore/parser
+#%{py_sitescriptdir}/ctypesgencore/parser/*.py[co]
+#%dir %{py_sitescriptdir}/ctypesgencore/printer
+#%{py_sitescriptdir}/ctypesgencore/printer/*.py[co]
+#%dir %{py_sitescriptdir}/ctypesgencore/processor
+#%{py_sitescriptdir}/ctypesgencore/processor/*.py[co]
