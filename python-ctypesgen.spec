@@ -1,14 +1,15 @@
 
 %define 	module	ctypesgen
-%define		snap	r68
+%define		snap	r69
 Summary:	A pure-python wrapper generator for ctypes
 Name:		python-%{module}
 Version:	0.0
 Release:	0.%{snap}.1
 License:	BSD
 Group:		Libraries/Python
+# svn export http://ctypesgen.googlecode.com/svn/trunk/ ctypesgen
 Source0:	%{module}-%{snap}.tar.bz2
-# Source0-md5:	5deda4849c2677beb054ec1b59aba5a9
+# Source0-md5:	73192491f45126a1681bd1a7553506d1
 URL:		http://code.google.com/p/ctypesgen/
 BuildRequires:	python
 BuildRequires:	python-devel >= 1:2.3
