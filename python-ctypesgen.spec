@@ -1,7 +1,7 @@
 
 %define 	module	ctypesgen
 %define		snap	r69
-%define		rel	2
+%define		rel	3
 Summary:	A pure-python wrapper generator for ctypes
 Name:		python-%{module}
 Version:	0.0
