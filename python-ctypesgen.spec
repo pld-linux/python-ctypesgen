@@ -14,6 +14,8 @@ Source0:	%{module}-%{snap}.tar.bz2
 URL:		http://code.google.com/p/ctypesgen/
 BuildRequires:	python
 BuildRequires:	python-devel >= 1:2.3
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
