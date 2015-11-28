@@ -33,14 +33,12 @@ nagłówkowych w C.
 %setup -q -n %{module}
 
 %build
-%{__python} setup.py build
+%py_build
 
 %install
 rm -rf $RPM_BUILD_ROOT
 
-%{__python} setup.py install \
-        --root=$RPM_BUILD_ROOT \
-        --optimize=2
+%py_install
 
 # defaultheader.py and preamble.py are templates not modules, so .py files
 # are required instead of compiled versions (and py_postclean cannot be used)
