@@ -1,7 +1,7 @@
 # TODO: programs shouldn't have ".py" extension
 %define 	module	ctypesgen
 %define		snap	r69
-%define		rel	4
+%define		rel	5
 Summary:	A pure-python wrapper generator for ctypes
 Summary(pl.UTF-8):	Generator wrapperów dla ctypes napisany w czystym Pythonie
 Name:		python-%{module}
