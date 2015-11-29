@@ -13,6 +13,7 @@ Group:		Libraries/Python
 Source0:	%{module}-%{snap}.tar.bz2
 # Source0-md5:	73192491f45126a1681bd1a7553506d1
 URL:		http://code.google.com/p/ctypesgen/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python
 BuildRequires:	python-devel >= 1:2.3
 BuildRequires:	python-modules
