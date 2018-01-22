@@ -2,7 +2,7 @@
 %define 	module	ctypesgen
 %define		snap	20150512
 %define		gitref	3d2d9803339503d2988382aa861b47a6a4872c32
-%define		rel	1
+%define		rel	2
 Summary:	A pure-python wrapper generator for ctypes
 Summary(pl.UTF-8):	Generator wrapperów dla ctypes napisany w czystym Pythonie
 Name:		python-%{module}
@@ -12,6 +12,7 @@ License:	BSD
 Group:		Libraries/Python
 Source0:	https://github.com/davidjamesca/ctypesgen/archive/%{gitref}/%{module}-%{snap}.tar.gz
 # Source0-md5:	abbc70e2fb7c5391ade6b56bd503c6ed
+Patch0:		gcc7-fix.patch
 URL:		https://github.com/davidjamesca/ctypesgen
 BuildRequires:	python >= 1:2.3
 BuildRequires:	python-devel >= 1:2.3
@@ -32,6 +33,7 @@ nagłówkowych w C.
 
 %prep
 %setup -q -n %{module}-%{gitref}
+%patch0 -p1
 
 %build
 %py_build
