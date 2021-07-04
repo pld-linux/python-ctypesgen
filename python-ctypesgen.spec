@@ -16,6 +16,7 @@ Group:		Libraries/Python
 #Source0Download: https://github.com/davidjamesca/ctypesgen/releases
 Source0:	https://github.com/davidjamesca/ctypesgen/archive/ctypesgen-%{version}/%{module}-%{version}.tar.gz
 # Source0-md5:	0928ef10a1f0323a82d55d6a0dfac8ff
+Patch0:		%{name}-x32.patch
 URL:		https://github.com/davidjamesca/ctypesgen
 %if %{with python2}
 BuildRequires:	python >= 1:2.3
@@ -61,6 +62,7 @@ nagłówkowych w C.
 
 %prep
 %setup -q -n %{module}-%{module}-%{version}
+%patch0 -p1
 
 %build
 %if %{with python2}

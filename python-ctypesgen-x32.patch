@@ -1,0 +1,11 @@
+--- ctypesgen-ctypesgen-1.0.2/ctypesgen/libraryloader.py.orig	2019-12-08 00:24:44.000000000 +0100
++++ ctypesgen-ctypesgen-1.0.2/ctypesgen/libraryloader.py	2021-07-04 07:46:45.360836111 +0200
+@@ -262,6 +262,8 @@
+         if bitage.startswith("64"):
+             # prefer 64 bit if that is our arch
+             unix_lib_dirs_list += ["/lib64", "/usr/lib64"]
++        elif bitage.startswith("32") and platform.machine() == "x86_64":
++            unix_lib_dirs_list += ["/libx32", "/usr/libx32"]
+ 
+         # must include standard libs, since those paths are also used by 64 bit
+         # installs
