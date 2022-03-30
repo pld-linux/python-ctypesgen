@@ -9,7 +9,7 @@ Summary:	A pure-python wrapper generator for ctypes
 Summary(pl.UTF-8):	Generator wrapperów dla ctypes napisany w czystym Pythonie
 Name:		python-%{module}
 Version:	1.0.2
-Release:	3
+Release:	4
 License:	BSD
 Group:		Libraries/Python
 # only wheels on https://pypi.org/simple/ctypesgen so get from github
