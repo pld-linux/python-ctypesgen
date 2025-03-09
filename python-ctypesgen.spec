@@ -62,7 +62,7 @@ nagłówkowych w C.
 
 %prep
 %setup -q -n %{module}-%{module}-%{version}
-%patch0 -p1
+%patch -P 0 -p1
 
 %build
 %if %{with python2}
